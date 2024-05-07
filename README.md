@@ -2,7 +2,7 @@
 
 toDoGuru is a life management app.
 
-Started off Prime Digital Academy's solo project template See below:(
+Started off Prime Digital Academy's solo project template See below(
 
 # Prime Solo Project - Starting Repo
 

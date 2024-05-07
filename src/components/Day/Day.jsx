@@ -4,8 +4,9 @@ import { useHistory } from 'react-router-dom';
 export default function Day() {
 
     const day = 1;
-    const dayOne = new Day('12/21/2013');
-    const today = new Day();
+    const lastEra = new Date("12/20/2013");
+    const today = new Date();
+    const days = Math.round((today.getTime() - lastEra.getTime()) / 86400000);
     // subtract dayOne from today and count days
     // every 28 days is another month
     // so I need to connect to Month for that
@@ -21,7 +22,7 @@ export default function Day() {
     return (
 
         <div>
-
+            {days}
         </div>
 
     );

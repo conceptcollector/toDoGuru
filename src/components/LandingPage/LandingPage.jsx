@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
+
+import Day from '../Day/Day';
+
 import './LandingPage.css';
 
 // CUSTOM COMPONENTS
@@ -22,6 +25,7 @@ function LandingPage() {
           <p>
             The Gregorian calendar is stupid.
           </p>
+          <Day />
         </div>
         <div className="grid-col grid-col_4">
           <RegisterForm />
