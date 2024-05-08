@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 
 import Day from '../Day/Day';
+import Month from '../Month/Month';
 
 import './LandingPage.css';
 
@@ -25,6 +26,7 @@ function LandingPage() {
           <p>
             The Gregorian calendar is stupid.
           </p>
+          <Month />
           <Day />
         </div>
         <div className="grid-col grid-col_4">
