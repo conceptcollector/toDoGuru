@@ -11,9 +11,9 @@ export default function Calendar() {
     const today = new Date();
     const yesterday = (today.getTime() / 86400000) - 1;
     const days = Math.round((today.getTime() - lastEra.getTime()) / 86400000);
-    const currentDay = 1;
-    const currentMonth = 1;
-    const currentYear = 1;
+    // const currentDay = 1;
+    // const currentMonth = 1;
+    // const currentYear = 1;
     // 28 days is a month
     // 13 months is 364 days
     // day 365 (and 366) need to be skipped and then restarted
@@ -24,28 +24,39 @@ export default function Calendar() {
     // using that same logic, I think triggering the day reset
     // comes in month
 
+    // Hail Eris!
+    // I think I need to pseudocode out the ENTIRE function first:
+    // So... year.
+    // A year is 365 days. (days === 1)
+    // On 12/21/2013 currentYear = 1
+    // today - lastEra (maybe??) === 365
+    // currentYear++;
+
+    function currentMonth() {
+        for (let i = 0; i < 13; i++) {
+            let currentMonth = i + 1;
+            if ((today.getTime() / 86400000) - day === 28) {
+                console.log(currentMonth);
+                return currentMonth;
+            }
+    }
+}
+
     for (let j = 0; j < 19; j++) {
 
         if ((today.getTime() / 86400000) - day === 365) {
-            currentYear++;
-            currentMonth = 1;
         }
 
-        for (let i = 0; i < 13; i++) {
-
-            if ((today.getTime() / 86400000) - day === 28) {
-                currentMonth++;
-                currentDay = 1;
+                // currentMonth++;
+                // currentDay = 1;
             }
     
-        }
-    }
     
 
     return (
 
         <div>
-            {currentYear}/{currentMonth}/{days}
+           /{currentMonth()}/{days}
         </div>
 
     )
