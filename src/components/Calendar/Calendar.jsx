@@ -31,7 +31,17 @@ export default function Calendar() {
     // On 12/21/2013 currentYear = 1
     // today - lastEra (maybe??) === 365
     // currentYear++;
+    // And then, of course, we have the leap years.
+    // leapYear is 366 days.
+    // So... the first question,
+    // is there a way to refer back to the previous iteration of an interating variable?
 
+    function currentYear() {
+        for (let i = 0; i < 19; i++) {
+            let currentYear = i + 1;
+        }
+    }
+    
     function currentMonth() {
         for (let i = 0; i < 13; i++) {
             let currentMonth = i + 1;
