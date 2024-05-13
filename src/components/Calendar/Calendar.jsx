@@ -11,9 +11,9 @@ export default function Calendar() {
     const today = new Date();
     const yesterday = (today.getTime() / 86400000) - 1;
     const days = Math.round((today.getTime() - lastEra.getTime()) / 86400000);
-    // const currentDay = 1;
-    // const currentMonth = 1;
-    // const currentYear = 1;
+    let currentDay;
+    let currentMonth;
+    let currentYear;
     // 28 days is a month
     // 13 months is 364 days
     // day 365 (and 366) need to be skipped and then restarted
@@ -36,15 +36,17 @@ export default function Calendar() {
     // So... the first question,
     // is there a way to refer back to the previous iteration of an interating variable?
 
-    function currentYear() {
+    // forEach...
+
+    function calculateYear() {
         for (let i = 0; i < 19; i++) {
-            let currentYear = i + 1;
+            currentYear = i + 1;
         }
     }
     
-    function currentMonth() {
+    function calculateMonth() {
         for (let i = 0; i < 13; i++) {
-            let currentMonth = i + 1;
+            currentMonth = i + 1;
             if ((today.getTime() / 86400000) - day === 28) {
                 console.log(currentMonth);
                 return currentMonth;
@@ -66,7 +68,7 @@ export default function Calendar() {
     return (
 
         <div>
-           /{currentMonth()}/{days}
+           /{currentMonth}/{days}
         </div>
 
     )
