@@ -38,9 +38,17 @@ export default function Calendar() {
 
     // forEach...
 
+    // Nope! That's only for arrays.
+    // setDate is what I'll be using here.
+    // So... this is still a little complicated...
+    // let me think...
+
+    // When the day is 365 days away from dayOne,
+    // then the loop starts over again.
+
     function calculateYear() {
+        currentYear = i + 1;
         for (let i = 0; i < 19; i++) {
-            currentYear = i + 1;
         }
     }
     
