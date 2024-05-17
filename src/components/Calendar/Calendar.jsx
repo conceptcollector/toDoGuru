@@ -47,8 +47,14 @@ export default function Calendar() {
     // then the loop starts over again.
 
     function calculateYear() {
-        currentYear = i + 1;
-        for (let i = 0; i < 19; i++) {
+        for (let i = 1; i < 20; i++) {
+            currentYear = i;
+            // if ((today.getTime() / 86400000) - day === 365) {
+            //     if (currentYear === i - 1 || currentYear === undefined) {
+            //         currentYear++;
+            //         return currentYear;
+            //     }
+            // }
         }
     }
     
@@ -76,6 +82,7 @@ export default function Calendar() {
     return (
 
         <div>
+            {/* What's the matter with {calculateYear}? */}
            /{currentMonth}/{days}
         </div>
 
